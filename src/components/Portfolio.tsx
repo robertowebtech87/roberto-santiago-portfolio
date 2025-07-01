@@ -39,28 +39,28 @@ const Portfolio: React.FC = () => {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack application built with React, Node.js, and PostgreSQL featuring payment integration and real-time inventory management.",
-      tech: ["React", "TypeScript", "Node.js", "PostgreSQL"],
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
-      github: "https://github.com/robertowebtech87/ecommerce-platform",
-      live: "https://ecommerce-demo.com"
+      title: "Futuristic Landing Page",
+      description: "Modern, cutting-edge landing page with stunning animations, 3D elements, and interactive components. Built with React and advanced CSS animations to create an immersive user experience.",
+      tech: ["React", "TypeScript", "CSS3", "Framer Motion"],
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop&auto=format",
+      github: "https://github.com/robertowebtech87/futuristic-landing",
+      live: "https://futuristic-landing.webtech87.pt"
     },
     {
-      title: "Task Management App", 
-      description: "Collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      tech: ["Vue.js", "Express", "MongoDB", "Socket.io"],
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop",
-      github: "https://github.com/robertowebtech87/task-manager",
-      live: "https://taskmanager-demo.com"
+      title: "E-Commerce Website", 
+      description: "Complete online store with shopping cart, payment integration, user authentication, and admin dashboard. Features responsive design and seamless checkout experience.",
+      tech: ["React", "Node.js", "MongoDB", "Stripe"],
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop",
+      github: "https://github.com/robertowebtech87/ecommerce-store",
+      live: "https://ecommerce.webtech87.pt"
     },
     {
-      title: "Data Visualization Dashboard",
-      description: "Interactive analytics dashboard for business intelligence with custom charts, filters, and real-time data processing.",
-      tech: ["React", "D3.js", "Python", "FastAPI"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
-      github: "https://github.com/robertowebtech87/analytics-dashboard",
-      live: "https://analytics-demo.com"
+      title: "Laser Service Website",
+      description: "Professional service website for laser treatment clinic featuring appointment booking, service galleries, testimonials, and contact forms with modern medical industry design.",
+      tech: ["React", "TypeScript", "CSS3", "EmailJS"],
+      image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=250&fit=crop&auto=format",
+      github: "https://github.com/robertowebtech87/laser-service",
+      live: "https://laser-service.webtech87.pt"
     }
   ];
 
@@ -313,7 +313,13 @@ const Portfolio: React.FC = () => {
               <Mail size={20} />
               Get In Touch
             </a>
-            <a href="/resume.pdf" className="contact-btn secondary" target="_blank" rel="noopener noreferrer">
+            <a 
+              href="/roberto-santiago-resume.pdf" 
+              className="contact-btn secondary" 
+              download="Roberto_Santiago_Resume.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
               Download Resume
             </a>
           </div>
