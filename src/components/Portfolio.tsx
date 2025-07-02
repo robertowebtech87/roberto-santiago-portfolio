@@ -228,8 +228,8 @@ const Portfolio: React.FC = () => {
           <div className="stats-grid">
             {[
               { icon: Code, value: "50+", label: "Projects Completed" },
-              { icon: Zap, value: "3+", label: "Years Experience" },
-              { icon: Users, value: "20+", label: "Happy Clients" },
+              { icon: Zap, value: "7+", label: "Years Experience" },
+              { icon: Users, value: "30+", label: "Happy Clients" },
               { icon: Award, value: "5+", label: "Technologies" }
             ].map((stat, index) => (
               <ScrollReveal 
