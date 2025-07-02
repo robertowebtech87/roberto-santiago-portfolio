@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Code, Zap, Users, Award, Sun, Moon } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 import './Portfolio.css';
 
 const Portfolio: React.FC = () => {
@@ -222,84 +223,109 @@ const Portfolio: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section id="about" className="stats">
-        <div className="stats-grid">
-          {[
-            { icon: Code, value: "50+", label: "Projects Completed" },
-            { icon: Zap, value: "3+", label: "Years Experience" },
-            { icon: Users, value: "20+", label: "Happy Clients" },
-            { icon: Award, value: "5+", label: "Technologies" }
-          ].map((stat, index) => (
-            <div key={index} className="stat-card">
-              <stat.icon className="stat-icon" size={32} />
-              <div className="stat-value">{stat.value}</div>
-              <div className="stat-label">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <ScrollReveal animation="fade-up">
+        <section id="about" className="stats">
+          <div className="stats-grid">
+            {[
+              { icon: Code, value: "50+", label: "Projects Completed" },
+              { icon: Zap, value: "3+", label: "Years Experience" },
+              { icon: Users, value: "20+", label: "Happy Clients" },
+              { icon: Award, value: "5+", label: "Technologies" }
+            ].map((stat, index) => (
+              <ScrollReveal 
+                key={index} 
+                animation="scale" 
+                delay={index * 100}
+              >
+                <div className="stat-card">
+                  <stat.icon className="stat-icon" size={32} />
+                  <div className="stat-value">{stat.value}</div>
+                  <div className="stat-label">{stat.label}</div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </section>
+      </ScrollReveal>
 
       {/* Projects Section */}
-      <section id="projects" className="projects">
-        <div className="container">
-          <h2 className="section-title">Featured Projects</h2>
-          <div className="projects-grid">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="project-card"
-              >
-                <div className="project-image">
-                  <img src={project.image} alt={project.title} />
-                  <div className="project-overlay"></div>
-                  <div className="project-links">
-                    <a href={project.github} className="project-link" target="_blank" rel="noopener noreferrer">
-                      <Github size={16} />
-                    </a>
-                    <a href={project.live} className="project-link" target="_blank" rel="noopener noreferrer">
-                      <ExternalLink size={16} />
-                    </a>
+      <ScrollReveal animation="fade-up">
+        <section id="projects" className="projects">
+          <div className="container">
+            <ScrollReveal animation="matrix">
+              <h2 className="section-title">Featured Projects</h2>
+            </ScrollReveal>
+            <div className="projects-grid">
+              {projects.map((project, index) => (
+                <ScrollReveal 
+                  key={index}
+                  animation="glow"
+                  delay={index * 200}
+                >
+                  <div className="project-card">
+                    <div className="project-image">
+                      <img src={project.image} alt={project.title} />
+                      <div className="project-overlay"></div>
+                      <div className="project-links">
+                        <a href={project.github} className="project-link" target="_blank" rel="noopener noreferrer">
+                          <Github size={16} />
+                        </a>
+                        <a href={project.live} className="project-link" target="_blank" rel="noopener noreferrer">
+                          <ExternalLink size={16} />
+                        </a>
+                      </div>
+                    </div>
+                    <div className="project-content">
+                      <h3 className="project-title">{project.title}</h3>
+                      <p className="project-description">{project.description}</p>
+                      <div className="project-tech">
+                        {project.tech.map((tech, techIndex) => (
+                          <span key={techIndex} className="tech-tag">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="project-content">
-                  <h3 className="project-title">{project.title}</h3>
-                  <p className="project-description">{project.description}</p>
-                  <div className="project-tech">
-                    {project.tech.map((tech, techIndex) => (
-                      <span key={techIndex} className="tech-tag">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollReveal>
 
       {/* Skills Section */}
-      <section id="skills" className="skills">
-        <div className="container">
-          <h2 className="section-title">Technical Skills</h2>
-          <div className="skills-grid">
-            {skills.map((skill, index) => (
-              <div key={index} className="skill-item">
-                <div className="skill-header">
-                  <span className="skill-name">{skill.name}</span>
-                  <span className="skill-percentage">{skill.level}%</span>
-                </div>
-                <div className="skill-bar">
-                  <div
-                    className="skill-progress"
-                    style={{ width: `${skill.level}%` }}
-                  />
-                </div>
-              </div>
-            ))}
+      <ScrollReveal animation="cyber">
+        <section id="skills" className="skills">
+          <div className="container">
+            <ScrollReveal animation="hologram">
+              <h2 className="section-title">Technical Skills</h2>
+            </ScrollReveal>
+            <div className="skills-grid">
+              {skills.map((skill, index) => (
+                <ScrollReveal 
+                  key={index}
+                  animation="fade-right"
+                  delay={index * 100}
+                >
+                  <div className="skill-item">
+                    <div className="skill-header">
+                      <span className="skill-name">{skill.name}</span>
+                      <span className="skill-percentage">{skill.level}%</span>
+                    </div>
+                    <div className="skill-bar">
+                      <div
+                        className="skill-progress"
+                        style={{ width: `${skill.level}%` }}
+                      />
+                    </div>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollReveal>
 
       {/* Contact Section */}
       <section id="contact" className="contact">
